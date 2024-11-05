@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hairven By Ayah</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,31 +17,38 @@
             padding: 20px;
             color: white;
         }
+        .navbar ul {
+            list-style-type: none;
+            background-color: #ff1493;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #fd59b1;
+        }
+        .navbar li {
+            float: left;
+        }
         .container {
             padding: 20px;
         }
-        img {
-            width: 200px;
-            border-radius: 10px;
-        }
-        .button {
-            background-color: #ff69b4;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .button:hover {
-            background-color: #ff1493;
-        }
-        .catalog {
+        .slideshow-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 20px;
-            margin-top: 20px;
+            padding: 20px;
+        }
+        .slideshow-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for a cleaner look */
         }
         .product {
             background-color: #fff;
@@ -51,6 +56,8 @@
             border-radius: 10px;
             padding: 10px;
             width: 200px;
+            flex: none;
+            scroll-snap-align: center;
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             display: flex;
@@ -60,6 +67,10 @@
         .product img {
             width: 100%;
             border-radius: 10px;
+            margin-bottom: 10px; /* Add space between the image and text */
+        }
+        .product-details {
+            margin-top: auto; /* Pushes the text details to the bottom */
         }
         .product-name {
             font-size: 18px;
@@ -75,7 +86,6 @@
             padding: 5px;
             color: #fff;
             border-radius: 5px;
-            margin-top: auto;
         }
         .in-stock {
             background-color: #4CAF50;
@@ -83,100 +93,86 @@
         .out-of-stock {
             background-color: #FF6347;
         }
-        .navbar ul{
-            list-style-type:none;
-            background-color:#ff1493;
-            padding:0px;
-            margin:0px;
-            overflow:hidden;
-        }
-        .navbar a{
-            color:rgb(240, 240, 240);
-            text-decoration: none;
-            padding: 15px;
-            display: block;
-        text-align: center;
-
-        }
-.navbar a:hover{
-    background-color:#fd59b1;
-}
-.navbar li{
-    float:left;
-}
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Hairven's by Ayarh</h1>
+        <h1>Welcome to Hairven's by Ayah</h1>
     </header>
+
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="about.html">About</a></li>
-            
         </ul>
-
     </nav>
 
-   
-
-    <!-- Product Catalog Section -->
     <div class="container">
-        <h2>Note!: WEBSITE IS STILL UNDER DEVELOPMENT</h2>
         <h2>Our Product Catalog</h2>
         <p>Browse through our available crowns and check stock status below!</p>
-        
-        <div class="catalog">
+        <div class="slideshow-container">
             <!-- Product 1 -->
             <div class="product">
                 <img src="IMG-20241022-WA0038.jpg" alt="Product 1">
-                <p class="product-name">Frontal weave</p>
-                <p class="product-price">R1200</p>
-                <p class="stock-status in-stock">In Stock</p>
+                <div class="product-details">
+                    <p class="product-name">Frontal Weave</p>
+                    <p class="product-price">R1200</p>
+                    <p class="stock-status in-stock">In Stock</p>
+                </div>
             </div>
             <!-- Product 2 -->
             <div class="product">
                 <img src="49093582416d421185e369aa0feb21b9.jpg" alt="Product 2">
-                <p class="product-name">Frontal_2</p>
-                <p class="product-price">R1950</p>
-                <p class="stock-status in-stock">In Stock</p>
+                <div class="product-details">
+                    <p class="product-name">Frontal_2</p>
+                    <p class="product-price">R1950</p>
+                    <p class="stock-status in-stock">In Stock</p>
+                </div>
             </div>
             <!-- Product 3 -->
             <div class="product">
                 <img src="57171a514fe445f19b903d9e1a6a0e16.jpg" alt="Product 3">
-                <p class="product-name">Frontal_3</p>
-                <p class="product-price">R1110</p>
-                <p class="stock-status in-stock">In Stock</p>
+                <div class="product-details">
+                    <p class="product-name">Frontal_3</p>
+                    <p class="product-price">R1110</p>
+                    <p class="stock-status in-stock">In Stock</p>
+                </div>
             </div>
             <!-- Product 4 -->
             <div class="product">
                 <img src="636b441d2d094a81a341d2151e8c7a11.jpg" alt="Product 4">
-                <p class="product-name">Frontal_4</p>
-                <p class="product-price">R1300</p>
-                <p class="stock-status in-stock">In Stock</p>
+                <div class="product-details">
+                    <p class="product-name">Frontal_4</p>
+                    <p class="product-price">R1300</p>
+                    <p class="stock-status in-stock">In Stock</p>
+                </div>
             </div>
+            <!-- Product 5 -->
             <div class="product">
-                <img src="49093582416d421185e369aa0feb21b9.jpg" alt="Product 6">
-                <p class="product-name">Frontal_2</p>
-                <p class="product-price">R1950</p>
-                <p class="stock-status in-stock">In Stock</p>
+                <img src="49093582416d421185e369aa0feb21b9.jpg" alt="Product 5">
+                <div class="product-details">
+                    <p class="product-name">Frontal_5</p>
+                    <p class="product-price">R1950</p>
+                    <p class="stock-status in-stock">In Stock</p>
+                </div>
             </div>
+            <!-- Product 6 -->
             <div class="product">
-                <img src="BowHeadClip.jpg" alt="Product 5">
-                <p class="product-name">Bow head clip</p>
-                <p class="product-price">R50</p>
-                <p class="stock-status in-stock">In Stock</p>
+                <img src="BowHeadClip.jpg" alt="Product 6">
+                <div class="product-details">
+                    <p class="product-name">Bow Head Clip</p>
+                    <p class="product-price">R50</p>
+                    <p class="stock-status in-stock">In Stock</p>
+                </div>
             </div>
         </div>
     </div>
-</div> 
+
     <footer>
         <p>&copy; 2024 Hairven By Ayah. All rights reserved.</p>
         <p>Contact: 068 419 4999</p>
         <p>Email: ayandagabela03@gmail.com</p>
     </footer>
-
 </body>
 </html>
