@@ -20,11 +20,15 @@
             color: white;
         }
         .container {
-            padding: 20px;
+            padding: 20px; 
+        
         }
         img {
             width: 200px;
             border-radius: 10px;
+            animation-name:slideUp;
+            animation-duration:1s;
+             
         }
         .button {
             background-color: #ff69b4;
@@ -103,6 +107,9 @@
 }
 .navbar li{
     float:left;
+}
+@keyframes slideUp{
+    from{transform: translateY(100%)}
 }
 
     </style>
